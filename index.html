@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reve Automation LLP. -An IoT Company</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/favicon.png">
+    <script src="https://kit.fontawesome.com/3efc37e746.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+</head>
+<body>
+    <section class="body">
+    <l-bouncy
+    size="80"
+    speed="1.75"
+    color="white"
+    id="preloader"
+></l-bouncy>
+<header class="header">
+    <a href="index.html"><img src="assets/logo1.png" class="logo" alt=""></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <i class="bx bx-x" style="display: none;"></i>
+    <nav id="navbar" class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#clients">Our Clients</a>
+        <div class="tech-dropdown">
+            <a href="#" id="dropdown-link">Technology</a>
+            <div class="tech-content" id="tech-content">
+                <a href="#">Internet of Things</a>
+                <a href="#">Machine Learning</a>
+                <a href="#">Artificial Intelligence</a>
+                <a href="#">Optical</a>
+            </div>
+        </div>
+        <br>
+        <div class="dropdown">
+            <a href="#solution" id="projects-link">Solution & Services</a>
+            <div class="dropdown-content" id="projects-dropdown">
+                <a href="#education">Education</a>
+                <a href="#solution">Healthcare</a>
+                <a href="#solution">Agriculture</a>
+                <a href="#solution">Automation</a>
+                <a href="#solution">Embedded Design</a>
+                <a href="#solution">Customized sensors</a>
+            </div>
+        </div>
+        <a href="#">Our Products</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+        <!-- <div class="btn-box">
+            <a href="#contact" class="btn">Book Demo</a>
+        </div> -->
+</header>
+<!-- scroll effect for header -->
+<script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<!-- dropdown for technology -->
+<script>const dropdownLink = document.getElementById("dropdown-link");
+    const techContent = document.getElementById("tech-content");
+    let timeId;
+    
+    dropdownLink.addEventListener("mouseover", () => {
+        clearTimeout(timeId);
+        techContent.style.display = "block";
+    
+    });
+    
+    dropdownLink.addEventListener("mouseout", () => {
+        timeId = setTimeout(() => {
+            techContent.style.display = "none";
+            
+        }, 300);
+    });
+    
+    techContent.addEventListener("mouseover", () => {
+        clearTimeout(timeId);
+    });
+    
+    techContent.addEventListener("mouseout", (event) => {
+        if (!event.toElement ||!techContent.contains(event.toElement)) {
+            timeId = setTimeout(() => {
+                techContent.style.display = "none";
+            }, 300);
+        }
+    });
+    
+    const quickLinks = techContent.getElementsByTagName("a");
+    
+    for (let i = 0; i < quickLinks.length; i++) {
+        quickLinks[i].addEventListener("mouseover", () => {
+            clearTimeout(timeId);
+        });
+    
+        quickLinks[i].addEventListener("mouseout", (event) => {
+            if (!event.toElement ||!techContent.contains(event.toElement)) {
+                timeId = setTimeout(() => {
+                    techContent.style.display = "none";
+                }, 300);
+            }
+        });
+    }</script>
+
+<!-- Dropdwon script -->
+<script>const projectsLink = document.getElementById("projects-link");
+const projectsDropdown = document.getElementById("projects-dropdown");
+let timeoutId;
+
+projectsLink.addEventListener("mouseover", () => {
+    clearTimeout(timeoutId);
+    projectsDropdown.style.display = "block";
+
+});
+
+projectsLink.addEventListener("mouseout", () => {
+    timeoutId = setTimeout(() => {
+        projectsDropdown.style.display = "none";
+        
+    }, 500);
+});
+
+projectsDropdown.addEventListener("mouseover", () => {
+    clearTimeout(timeoutId);
+});
+
+projectsDropdown.addEventListener("mouseout", (event) => {
+    if (!event.toElement ||!projectsDropdown.contains(event.toElement)) {
+        timeoutId = setTimeout(() => {
+            projectsDropdown.style.display = "none";
+        }, 500);
+    }
+});
+
+const dropdownLinks = projectsDropdown.getElementsByTagName("a");
+
+for (let i = 0; i < dropdownLinks.length; i++) {
+    dropdownLinks[i].addEventListener("mouseover", () => {
+        clearTimeout(timeoutId);
+    });
+
+    dropdownLinks[i].addEventListener("mouseout", (event) => {
+        if (!event.toElement ||!projectsDropdown.contains(event.toElement)) {
+            timeoutId = setTimeout(() => {
+                projectsDropdown.style.display = "none";
+            }, 500);
+        }
+    });
+}</script>
+<section class="home">
+<div class="hero">
+    <video autoplay loop muted plays-inline class="bg_video">
+        <source src="assets/stock videos/Smart City Digital City Video.mp4" type="video/mp4">
+    </video>
+    <div class="content_new">
+        <h1>An IoT Company</h1>
+        <p>Our Vision is to build a sustainable society by leveraging IoT technology through continuing research and innovations.</p>
+        <p>Our focus area is to design and supply customised sensors and solutions in chosen area like IIoT, Home Automation, BMS (Building Management System), Healthcare and Defence.</p>
+        
+        <a href="#intro">Learn More</a>
+    </div>
+    <div class="down-arrow"><i class='bx bxs-chevrons-down' ></i></div>
+</div>  
+</section>
+
+<section class="intro" id="intro">
+    <div class="Intro-container">
+        <div class="container-image">
+        <img src="images/stock/ML.png" alt="Intro Image" id="animatedImage">
+        </div>
+    <div class="container-content">
+        <h1>Introduction</h1>
+        <p>The “Internet of things” (IoT) is becoming an increasingly growing technology in the workplace and outside of it. It’s a concept that not only has the potential to impact how we live but also how we work. Broadband Internet is become more widely available, the cost of connecting is decreasing, more devices are being created with Wi-Fi capabilities and sensors built into them, technology costs are going down, and smartphone penetration is sky-rocketing.  All of these things are creating a “perfect storm” for the IoT.</p>
+        <p>The Internet of Things (IoT) is also a computing concept that describes a future where everyday physical objects will be connected to the Internet and be able to identify themselves to other devices. The IoT is significant because an object that can represent itself digitally becomes something greater than the object by itself. No longer does the object relate just to you, but is now connected to surrounding objects and database data. When many objects act in unison, they are known as having "ambient intelligence."</p>
+        <a href="#">Read More</a>
+    </div>
+    
+    </div>
+</section>
+<!-- Hover Effect -->
+<script>
+    const image = document.getElementById('animatedImage');
+
+    image.addEventListener('mousemove', (e) => {
+        const rect = image.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        image.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+    });
+
+    image.addEventListener('mouseleave', () => {
+        image.style.transform = 'translate(0, 0)';
+    });
+</script>
+
+
+<!-- Why Choose Reve? -->
+<section id="solution" class="solution">
+    <section class="head">
+        <div class="heading">
+            <h3>Why Choose <span>Reve?</span></h3>
+        </div>
+    </section>
+    <section class="solutions">
+        <p>As the companies world wide look to capitalise on IoT, one of the most crucial and integral element is the smart sensor.
+
+            Whether it's a sensor for Home Automation or the Plasma Research Lab, Reve delivers personal attention, engineering expertise, and technical support to reduce development risks, improve the understanding of design issues, and quickly identify the right solutions.</p>
+            <h1>With decades of application engineering Reve provides the perspective and experience in</h1>
+        <div class="cards-container">
+            <div class="card">
+                <a>
+                    <img src="images/stock/cutom_design.jpg" alt="" >
+                    <h4>Custom Design</h4>
+                </a>
+                
+            </div>
+    
+    
+            <div class="card">
+                <a>
+                    <img src="images/stock/Quality.jpg" alt="">
+                    <h4>Superior Quality</h4>
+                </a>
+                
+            </div>
+    
+            <div class="card">
+                <a>
+                    <img src="images/stock/optimized.jpg" alt="">
+                    <h4>Highly Optimised</h4>
+                </a>
+                
+            </div>
+            <div class="card">
+                <a>
+                    <img src="images/stock/realible.jpg" alt="">
+                    <h4>Reliability</h4>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    </section>
+    <!--About section-->
+
+    <section class="about" id="about">
+        <h2 class="about-heading">About <span>US</span></h2>
+        <div class="about-img">
+            <img src="assets/mp1.jpg" alt="">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <h3>Dr. Madhukant Patel</h3>
+            <h5>MD & Research Scientist, Reve Automation LLP</h5>
+            <h4>Former Scientist/ Engineer, ISRO</h4>
+            
+            <p>REVE Automation LLP is a products based company focused on ‘solution offering’ firm with extensive experience in providing state of art Electronic Design, Firmware, & WSN (Wireless Sensor Network) on IoT (Internet of Things) domain. We are specialist in customised solutions for enterprises.
+
+                <br><br>Globally, IoT is a buzzword, rapidly upcoming in across all sections of society; may it be safety & comfort for human life, industrial automation, governance, research, healthcare, agro, commodities etc.
+                
+                <br><br>As per surveys done by various consulting companies, the market size of “Smart Technology” will be of the tune in Billions; and will be growing exponentially for years to come. This market will stabilise in around five years and will keep growing for more than a decade and half.</p>
+                <a href="about.html">Read More</a>
+                <!-- <div class="btn-box btns">
+                    <a href="about.html" class="btn">Read More</a>
+                </div> -->
+        </div>
+    </section>
+    <!--end of about section-->
+
+    <!-- Clients section -->
+
+    <section class="clients" id="clients">
+        <div class="clients-wrap">
+            <h1>Our Clients</h1>
+            <hr/>
+            <div class="clients-in">
+                <ul>
+                    <li>
+                        <img src="images/clients/Ntpc.png" alt="">
+                        <img src="images/clients/Ntpc-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/clients/gc.png" alt="">
+                        <img src="images/clients/gc-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/clients/cept.png" alt="">
+                        <img src="images/clients/cept-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/clients/gfield.png" alt="">
+                        <img src="images/clients/gfield-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/clients/St.png" alt="">
+                        <img src="images/clients/St-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/clients/GIFT.png" alt="">
+                        <img src="images/clients/GIFT-1.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of clients section -->
+
+    <!-- Solutions & services -->
+
+    <section id="ourproduct" class="ourproduct">
+    <section class="head">
+        <div class="heading">
+            <h3>Our Solutions & Services</h3>
+        </div>
+        <hr/>
+        
+    </section>
+
+    <section class="section__container store__container" id="store">
+        <!-- Slider main container -->
+    <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+        <a href="#">
+            <div class="store__card">
+            <h4></h4>
+            <img src="images/Solutions/Smarthome.jpg" alt="store" />
+            <h3>Smart Home</h3>
+        </a>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="store__card">
+            <h4></h4>
+            <img src="images/Solutions/smartstreetlights.jpg" alt="store" />
+            <h3>Smart Street Lights</h3>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="store__card">
+            <h4></h4>
+            <img src="images/Solutions/smartparking.jpg" alt="store" />
+            <h3>Smart Parking</h3>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="store__card">
+            <h4></h4>
+            <img src="images/Solutions/smartwaste.jpg" alt="store" />
+            <h3>Smart Waste Management</h3>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="store__card">
+            <h4></h4>
+            <img src="images/Solutions/education.jpg" alt="store" />
+            <h3>Education</h3>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="store__card">
+            <h4></h4>
+            <img src="images/Solutions/healthcare.jpg" alt="store" />
+            <h3>Healthcare</h3>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="store__card">
+                <h4></h4>
+                <img src="images/Solutions/agriculture.jpg" alt="store" />
+                <h3>Agriculture</h3>
+            </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="store__card">
+                    <h4></h4>
+                    <img src="images/Solutions/automation.jpg" alt="store" />
+                    <h3>Automation</h3>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="store__card">
+                        <h4></h4>
+                        <img src="images/Solutions/embedded design.jpg" alt="store" />
+                        <h3>Embedded Designs</h3>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="store__card">
+                            <h4></h4>
+                            <img src="images/Solutions/custom-sensors.jpg" alt="store" />
+                            <h3>Customized  Sensors</h3>
+                        </div>
+                        </div>
+        </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</section>
+</section>
+    <!-- End solution & services -->
+<section class="education" id="education">
+    <h2>Education</h2>
+    <hr/>
+    <div class="education-container">
+        <div class="image-content">
+        <img src="images/education/e-learning.jpg" alt="Intro Image" id="animatedImage">
+        </div>
+    <div class="text-content">
+        <h1>E-Learning</h1>
+        <p>Reve Automation LLP offers cutting-edge IoT solutions with a strong focus on E-Learning services. Through their innovative platform, they provide a seamless and interactive online learning experience, leveraging IoT technology to enhance educational outcomes. Their E-Learning services are designed to deliver high-quality content, personalized learning paths, and real-time analytics, making education more accessible, engaging, and effective for students and institutions alike.</p>
+        <p>In addition to providing advanced IoT solutions, Reve Automation LLP's E-Learning services empower educators and learners with tools that foster creativity and collaboration. Their platform integrates IoT-driven features such as smart classrooms, remote monitoring, and adaptive learning environments. By combining technology with education, Reve Automation LLP is transforming traditional learning methods, ensuring that students can access the best resources and support from anywhere, at any time. Their commitment to innovation in education makes them a leader in the E-Learning space.</p>
+        <!-- <a href="#">Read More</a> -->
+    </div>
+    </div>
+
+    <div class="education-container-mid">
+        
+    <div class="text-content">
+        <h1>IoT Workshop</h1>
+        <p>Reve Automation LLP offers specialized IoT workshops designed to equip participants with practical knowledge and hands-on experience in the rapidly growing field of the Internet of Things. These workshops are tailored for students, professionals, and enthusiasts who want to dive deeper into IoT technology. Through interactive sessions, participants learn to design, develop, and deploy IoT solutions, gaining insights into real-world applications across various industries. The workshops cover essential topics like sensor integration, IoT communication protocols, and data analytics, making them a valuable resource for anyone looking to enhance their skills in this domain.</p>
+        <p>In addition to technical training, Reve Automation LLP's IoT workshops emphasize innovation and problem-solving. Participants are encouraged to work on real-time projects that address current challenges, fostering creativity and collaboration. The workshops also provide networking opportunities with industry experts and peers, enabling participants to build connections and stay updated with the latest trends in IoT. Whether you're a beginner or an advanced learner, these workshops offer a comprehensive learning experience that can help you stay ahead in the evolving tech landscape.</p>
+        <!-- <a href="#">Read More</a> -->
+    </div>
+    <div class="image-content">
+        <img src="images/education/iot workshop.jpg" alt="Intro Image" id="animatedImage">
+        </div>
+    </div>
+
+    <div class="education-container">
+        <div class="image-content">
+        <img src="images/education/ai-ml.jpg" alt="Intro Image" id="animatedImage">
+        </div>
+    <div class="text-content">
+        <h1>AI/ ML Workshop</h1>
+        <p>Reve Automation LLP also offers AI/ML workshops that are designed to provide participants with a deep understanding of artificial intelligence and machine learning concepts. These workshops cater to students, professionals, and tech enthusiasts who are eager to explore the vast potential of AI and ML. Through hands-on projects and real-world examples, participants learn how to build and deploy AI models, understand machine learning algorithms, and apply these technologies to solve complex problems. The workshops cover a wide range of topics, from the basics of AI/ML to advanced techniques like deep learning and natural language processing.</p>
+        <p>In addition to technical knowledge, the AI/ML workshops at Reve Automation LLP emphasize critical thinking and innovation. Participants are encouraged to work on cutting-edge projects that challenge traditional approaches and push the boundaries of what's possible with AI and ML. The workshops also provide opportunities to engage with industry experts, gain insights into the latest trends, and network with peers. Whether you're just starting out or looking to advance your skills, these workshops offer a comprehensive and enriching learning experience that can help you excel in the AI/ML field.</p>
+        <!-- <a href="#">Read More</a> -->
+    </div>
+    </div>
+</section>
+
+
+<section id="agriculture-section">
+    <h2>Agriculture</h2>
+    <hr/>
+    <!-- Hero Section -->
+    <div class="agri-hero">
+        <video autoplay loop muted playsinline id="background-video">
+            <source src="assets/stock videos/Agri.mp4" type="video/mp4">        </video>
+        <div class="agri-hero-content">
+            <h1>Smart Farming, Sustainable Future</h1>
+            <p>Transforming Agriculture with IoT & AI</p>
+            <a href="#details" class="cta-btn">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Infographic Section -->
+    <div class="infographic">
+        <h2>Our Agricultural Solutions</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="assets/soil-1.png" alt="Soil Analysis">
+                <h3>Soil Analysis</h3>
+                <p>NPK, Moisture, pH, Organic Carbon</p>
+            </div>
+            <div class="step">
+                <img src="assets/Drop.png" alt="Water Quality">
+                <h3>Water Quality</h3>
+                <p>Ensure optimal water conditions</p>
+            </div>
+            <div class="step">
+                <img src="assets/crop-1.png" alt="Crop Suitability">
+                <h3>Crop Suitability</h3>
+                <p>Analyze crop potential with NDVI</p>
+            </div>
+            <div class="step">
+                <img src="assets/drone-1.png" alt="Drone Survey">
+                <h3>Drone Survey</h3>
+                <p>Real-time data collection</p>
+            </div>
+            <div class="step">
+                <img src="assets/weather-1.png" alt="Weather Monitoring">
+                <h3>Weather Monitoring</h3>
+                <p>Track temperature, humidity, and more</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="contact">
+    <footer>
+        <div class="fcontainer">
+            <div class="sec">
+            <h2>About Us</h2>
+            <p>"REVE Automation LLP is a products based company focused on ‘solution offering’ firm with extensive experience in providing state of art Electronic Design, Firmware, & WSN (Wireless Sensor Network) on IoT (Internet of Things) domain. We are specialist in customised solutions for enterprises."<br>Globally, IoT is a buzzword, rapidly upcoming in across all sections of society; may it be safety & comfort for human life, industrial automation, governance, research, healthcare, agro, commodities etc.</p>
+            <!-- <ul class="sci">
+                <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                <li><a href="https://www.youtube.com/@greencloudisoft2399"><i class='bx bxl-youtube'></i></a></li>
+            </ul> -->
+        </div>
+        <div class="sec quickLinks">
+            <h2>Get In Touch</h2>
+            <ul>
+                <li><a >FAQs</a></li>
+                <li><a >Partner With Us</a></li>
+                <li><a >Support</a></li>
+                <li><a >Terms & Condition</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contact Us</h2>
+            <ul class="info">
+                <li>
+                    <span><i class='bx bxs-map' aria-hidden="true"></i></span>
+                    <span>30D, Sumel 5 Buisness Park,<br>Near Chamunda Bridge, Asarwa, Ahmedabad, 
+                        Gujarat 380016</span>
+                </li>
+                <!-- <li>
+                    <span><i class='bx bxs-phone' aria-hidden="true" ></i></span>
+                    <p><a href="tel:+91-9265872944">+91-92658 72944</a><br><a href="tel:+91-70209 20762">+91-70209 20762</a></p>
+                    
+                </li> -->
+                <li>
+                    <span><i class='bx bxl-gmail' aria-hidden="true" ></i></span>
+                    <p><a href="mailto:info@reveautomation.com">info@reveautomation.com</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    </footer>
+
+<!-- <div class="places">
+    <p>Gandhinagar Ahmedabad Surat Baroda Ajmer Jaipur Pune Mumbai Anand</p>
+</div> -->
+<div class="copyright">
+    <p>Copyright © 2024 REVE AUTOMATION LLP. -An IoT Company | Website Designed By Himanshu Kumar Sinha.</p>
+</div>
+</section>
+<!-- JAVASCRIPT HERE -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    });
+</script>
+<script>
+        //prevent right click
+        document.addEventListener("contextmenu", function(event){
+    event.preventDefault();
+}, false);
+    </script>
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+                e.preventDefault();
+                return false;
+}
+});
+    </script>
+    <script>
+        document.getElementById('myVideo').addEventListener('ended', function() {
+        this.currentTime = this.duration;
+        });
+
+        const video = document.getElementById('myVideo');
+        const experienceSection = document.getElementById('experience');
+        const observer = new IntersectionObserver((entries) => {
+if (entries[0].isIntersecting) {
+    video.play();
+} else {
+    video.pause();
+}
+}, {
+    threshold: 0.8, 
+});
+
+observer.observe(experienceSection);
+    </script>
+    <script>
+    const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        const menuIconMenu = menuIcon.querySelector('.bx-menu');
+        const menuIconX = menuIcon.querySelector('.bx-x');
+        
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuIconMenu.style.display = navbar.classList.contains('active') ? 'none' : 'block';
+            menuIconX.style.display = navbar.classList.contains('active') ? 'block' : 'none';
+        });</script>
+        <script>
+            const swiper =new Swiper(".swiper",{
+                loop:true,
+                autoplay:{
+                    delay:2000,
+                    disableOnInteraction:false,
+                },
+                effect:"pagination",
+                grabCursor:true,
+                centerSlides:true,
+                slidesPerView:"auto",
+                coverflowEffect:{
+                    rotate:0,
+                    depth:100,
+                    modifier:0,
+                    scale:0.8,
+                    slideShadows:false,
+                    stretch:-100
+                },
+                navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+                pagination:{
+                    el:".swiper-pagination",
+                }
+            })
+        </script>
+<script defer src="main.js"></script>
+<!-- JAVASCRIPT END HERE -->
+</body>
+</html>

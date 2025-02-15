@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/favicon.png">
+
+    <script src="https://kit.fontawesome.com/3efc37e746.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+</head>
+<body>
+    <section class="body">
+    <l-bouncy
+    size="80"
+    speed="1.75"
+    color="white"
+    id="preloader"
+></l-bouncy>
+<header class="header">
+    <a href="index.html"><img src="assets/logo1.png" class="logo" alt=""></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <i class="bx bx-x" style="display: none;"></i>
+    <nav id="navbar" class="navbar">
+        <a href="index.html" >Home</a>
+        <a href="#about" class="active">About Us</a>
+        <a href="#clients">Our Clients</a>
+        <a href="#">Technology</a>
+        <!-- <div class="dropdown">
+            <a href="#solution" id="projects-link">Technology</a>
+            <div class="dropdown-content" id="projects-dropdown">
+                <a href="#solution">ML/AI</a>
+                <a href="#solution">IoT</a></div> -->
+        <div class="dropdown">
+            <a href="#solution" id="projects-link">Solution & Services</a>
+            <div class="dropdown-content" id="projects-dropdown">
+                <a href="#solution">Education</a>
+                <a href="#solution">Healthcare</a>
+                <a href="#solution">Agriculture</a>
+                <a href="#solution">Automation</a>
+                <a href="#solution">Embedded Design</a>
+                <a href="#solution">Customized sensors</a>
+            </div>
+        </div>
+        <a href="#">Our Products</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
+<!-- scroll effect for header -->
+<script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
+</script>
+<!-- Dropdwon script -->
+<script>const projectsLink = document.getElementById("projects-link");
+const projectsDropdown = document.getElementById("projects-dropdown");
+let timeoutId;
+
+projectsLink.addEventListener("mouseover", () => {
+    clearTimeout(timeoutId);
+    projectsDropdown.style.display = "block";
+
+});
+
+projectsLink.addEventListener("mouseout", () => {
+    timeoutId = setTimeout(() => {
+        projectsDropdown.style.display = "none";
+        
+    }, 500);
+});
+
+projectsDropdown.addEventListener("mouseover", () => {
+    clearTimeout(timeoutId);
+});
+
+projectsDropdown.addEventListener("mouseout", (event) => {
+    if (!event.toElement ||!projectsDropdown.contains(event.toElement)) {
+        timeoutId = setTimeout(() => {
+            projectsDropdown.style.display = "none";
+        }, 500);
+    }
+});
+
+const dropdownLinks = projectsDropdown.getElementsByTagName("a");
+
+for (let i = 0; i < dropdownLinks.length; i++) {
+    dropdownLinks[i].addEventListener("mouseover", () => {
+        clearTimeout(timeoutId);
+    });
+
+    dropdownLinks[i].addEventListener("mouseout", (event) => {
+        if (!event.toElement ||!projectsDropdown.contains(event.toElement)) {
+            timeoutId = setTimeout(() => {
+                projectsDropdown.style.display = "none";
+            }, 500);
+        }
+    });
+}</script>
+<!--About section-->
+
+<section class="about" id="about" style="margin-top: 60px;">
+    <h2 class="about-heading">About <span>US</span></h2>
+    <div class="about-img">
+        <img src="assets/mp1.jpg" alt="">
+        <span class="circle-spin"></span>
+    </div>
+    <div class="about-content">
+        <h3>Dr. Madhukant Patel</h3>
+        <h5>MD & Research Scientist, Reve Automation LLP</h5>
+        <h4>Former Scientist/ Engineer, ISRO</h4>
+
+        <p>A seasoned professional and entrepreneur with over 3 and half decades rich experience in Sensor Designing, Electronics & Communications, Product Development, Project Management, Corporate training, Team Management with well known organizations in Electronics, Communication, Instrumentation, Automation, Robotics, etc Expertise in executing projects from Concept-to-Launch with focus on Project Scope and rendering end-to-end solutions. Possess sound product knowledge and thorough understanding of design & development of High-Reliability Systems for Industries, Broadcast, Defense Communications, and Industrial automation with abilities in optimizing product performance, cost and efficiencies. An enterprising leader with abilities in leading multi-skilled motivated teams to achieving organizational goals and industry best practices. Have successfully worked on various projects. Design and realization of projects with ISRO, DRDO and other Govt. Organizations. Managed projects with MNCs with ISO9001 and CMMI processes.</p>
+        <p>The stints with leading organizations have honed abilities in identifying potential, deconstructing complex situations and further conceiving and implementing streamlined solutions that have led to increased revenues, profitability and overall success. Exceptionally well organised with a track record that demonstrates self motivation, creativity, and initiative to achieve both personal & corporate goals.
+
+            <br><br>He is pursuing PhD at UPES, Dehradun on Advanced Sensor Technology. He holds MEng. in Electronics and Communication Engineering from DDIT, Nadiad and BEng. In Electronics and Communication Engineering form L D College of Engineering, Ahmedabad. He also holds Diploma in Electronics & Radio Engineering Digital Design from AVPTI, Rajkot and Certificate course in Marketing Management from IGNOU, New Delhi. He has been invited as Guest/Expert speaker from various educational institutes and research organisations.</p>
+            <h6>Domain Knowledge</h6>
+            <ul>
+                <li>Elevator controls and communications</li>
+                <li>Machine Vibration measuring sensors</li>
+                <li>Image Processing: Vehicle positioning & counting, Intrusion detection, traffic detection, street light management</li>
+                <li>Robotics</li>
+                
+            </ul>
+            <p>REVE Automation LLP is a products based company focused on ‘solution offering’ firm with extensive experience in providing state of art Electronic Design, Firmware, & WSN (Wireless Sensor Network) on IoT (Internet of Things) domain. We are specialist in customised solutions for enterprises.
+
+            <br><br>Globally, IoT is a buzzword, rapidly upcoming in across all sections of society; may it be safety & comfort for human life, industrial automation, governance, research, healthcare, agro, commodities etc.
+            
+            <br><br>As per surveys done by various consulting companies, the market size of “Smart Technology” will be of the tune in Billions; and will be growing exponentially for years to come. This market will stabilise in around five years and will keep growing for more than a decade and half.
+            <h1>Commitment to the Corporate</h1>
+            <p>REVE does technology consultancy partnerships with our customers with main focus on solutions for high end and complex technology problems. Our team of Scientists, Researchers and innovation driven Engineers is a perfect combination of various expertise.
+
+                <br><br>REVE also supports customers from concept stage to design, prototyping, testing and taking product to mass production.
+                
+                <br><br>Our focus is to create Automation and Vision eco-Systems for Smart Home, Smart Industry, Smart Hospital, Smart Transport System, Smart Elevator System and leads to the development of Smart Cities.</p>
+        
+        </p>
+            
+    </div>
+</section>
+<!--end of about section-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    });
+</script>
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        const menuIconMenu = menuIcon.querySelector('.bx-menu');
+        const menuIconX = menuIcon.querySelector('.bx-x');
+        
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuIconMenu.style.display = navbar.classList.contains('active') ? 'none' : 'block';
+            menuIconX.style.display = navbar.classList.contains('active') ? 'block' : 'none';
+        });</script>
+</body>
+</html>
